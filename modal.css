@@ -1,0 +1,176 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+  /* color: var(--white); */
+}
+html{
+ font-size: 1rem;
+ scroll-behavior: smooth; 
+ scroll-snap-type: y mandatory;
+ scroll-padding-top: 70px;
+}
+body{
+  font-size: 1em;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
+
+  /* background-image: linear-gradient(rgba(0,0,0, 0.5),rgba(0,0,0, 0.5)),url(images/lib9.jpg); */
+  background-size: cover;
+  background-position: bottom center;
+  background-attachment: fixed;
+
+  -ms-overflow-style: none;
+  /* 스크롤바 */
+  overflow-x: auto;
+ } 
+
+body::-webkit-scrollbar {
+display: none;
+}
+/* 스크롤바 */
+
+
+
+
+
+
+
+.modal {
+  position: fixed;
+  top: 140px;/* 팝업창 위치높이 */
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 400ms ease-in-out;
+  border: 1px solid var(--black);
+  border-radius: 10px;
+  z-index: 111;
+  background-color: skyblue;
+
+
+  width: 50%;
+  max-width: 95%;/* 팝업창 크기, 특히 모바일 중요*/
+  /* outline: 1px solid red; */
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+  
+  /* outline: 1px solid red; */
+}
+
+.modal-header {
+  padding: 5px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgb(0, 0, 0);
+  /* outline: 1px solid red; */
+}
+
+.modal-header .title {
+  font-size: 1rem;
+  font-weight: bold;
+  color: darkgray;
+  /* background-color: var(--darkgray); */
+  margin-left: 40%;
+  /* outline: 1px solid red; */
+}
+
+.modal-header .close-button {
+  cursor: pointer;
+  border: 0px solid gray;
+  border-radius: 10px;
+  padding: 0px 25px;  
+  background: none;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--white);
+  text-decoration: none;
+  /* outline: 1px solid red; */
+}
+
+.modal-body {
+  padding: 1px 3px;
+  /* outline: 1px solid darkgray; */
+
+ }
+
+#overlay {
+  position: fixed;
+  opacity: 0;/* 투명한 체로 오버된 창  클릭 사용  */
+  transition: 0ms ease-in-out;
+  margin: 70px auto;
+  top: 0%;/* 늘리면 아무데나 클릭 안됨 */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: none;/* 색 넣으면 가림 */
+  /* background-color: rgba(0, 0, 0, .5); */
+  pointer-events: none;
+  /* outline: 1px solid gold; */
+}
+
+#overlay.active {
+  /* background: rgba(246, 246, 240, 0.6); */
+  opacity: 10;/* 투명한 체로 오버된 창  클릭 사용  */
+  pointer-events: all;
+  /* outline: 1px solid blue; */
+}
+@media(max-width:1000px){
+  .modal {
+    position: fixed;
+    top: 140px;/* 팝업창 위치높이 */
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 400ms ease-in-out;
+    border: 1px solid var(--black);
+    border-radius: 10px;
+    z-index: 111;
+    background-color: skyblue;
+    width: 60%;
+    max-width: 95%;/* 팝업창 크기, 특히 모바일 중요*/
+    
+  
+    /* outline: 1px solid red; */
+  }}
+
+  @media(max-width:800px){
+    .modal {
+      position: fixed;
+      top: 140px;/* 팝업창 위치높이 */
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      transition: 400ms ease-in-out;
+      border: 1px solid var(--black);
+      border-radius: 10px;
+      z-index: 111;
+      background-color: skyblue;
+      width: 75%;
+      max-width: 95%;/* 팝업창 크기, 특히 모바일 중요*/
+      
+    
+      /* outline: 1px solid red; */
+    }}
+
+@media(max-width:644px){
+  .modal {
+    position: fixed;
+    top: 140px;/* 팝업창 위치높이 */
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 400ms ease-in-out;
+    border: 1px solid var(--black);
+    border-radius: 10px;
+    z-index: 111;
+    background-color: skyblue;
+    width: 95%;
+    max-width: 95%;/* 팝업창 크기, 특히 모바일 중요*/
+    
+  
+    /* outline: 1px solid red; */
+  }}

@@ -1,0 +1,167 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>영문법</title>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR" />
+<meta name="description" content="">
+<meta name="Author" content="심희섭">
+<meta http-equiv="imagetoolbar" content="no">
+
+<style type="text/css">
+	html {
+		overflow: hidden;
+	}
+	body {
+		margin: 0px;
+		padding: 0px;
+		background: #ffffff;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+	}
+
+	span {
+		position: absolute;
+		font-family: verdana,arial;
+		
+		width: 100%;
+	}
+
+
+</style>
+
+<script type="text/javascript">
+
+var O = [];
+
+function Cobj(xs, ys, css, html){
+	this.xs = xs;
+	this.ys = ys;
+	this.m = 1;
+	this.x = xs * 10000;
+	this.y = ys * 10000;
+	this.o = document.createElement("span");
+	this.o.innerHTML = html;
+	for(var i in css)this.o.style[i] = css[i];
+	document.body.appendChild(this.o);
+	this.mov = function () {
+		with(this) {
+			if(xs!=0){
+				x += xs;
+				o.style.left = x+'px';
+				if(xs>0 && x>document.body.offsetWidth) x = -o.offsetWidth;
+				else if(xs<0 && x<-o.offsetWidth) x = document.body.offsetWidth;
+			}
+			if(ys!=0){
+				y += ys;
+				o.style.top = y+'px';
+				if(ys>0 && y>document.body.offsetHeight) y = -o.offsetHeight;
+				else if(ys<0 && y<-o.offsetHeight) y = document.body.offsetHeight;
+			}
+		}
+	}
+}
+
+function run(){
+	for(var i in O)O[i].mov();
+	setTimeout("run();", 52);
+}
+
+onload = function(){
+	O.push(new Cobj(0,1,
+		{
+			'color':'#008080',
+			'fontSize':'16pt',
+			'letterSpacing':'-0px',
+			'textAlign':'left'
+		},
+		""
+	));
+
+	O.push(new Cobj(0,-2,
+		{
+			'color':'#c0c0c0',
+			'fontSize':'10pt',
+			'left':'25%'
+		},
+		""// <-스크롤시킬 글자넣을 곳 
+	));
+
+	O.push(new Cobj(-1,0,
+		{
+			'color':'#F3F3F3',
+			'fontSize':'26pt',
+			'top':'0%'
+		},
+		""// <-스크롤시킬 글자넣을 곳 
+	));
+
+	O.push(new Cobj(3,0,
+		{
+			'color':'#fff',
+			'fontSize':'14pt',
+			'top':'55%'
+		},
+		""// <-스크롤시킬 글자넣을 곳 
+	));
+
+	O.push(new Cobj(2,0,
+		{
+			'color':'#ff8000',
+			'fontSize':'16pt',
+			'top':'65%'
+		},
+		""// <-스크롤시킬 글자넣을 곳 
+	));
+
+	O.push(new Cobj(0,2,
+		{
+			'color':'#008080',
+			'fontSize':'8pt',
+			'width':'100%',
+			'textAlign':'center'
+		},
+		""// <-스크롤시킬 글자넣을 곳 
+	));
+
+	O.push(new Cobj(0,-1,
+		{
+			'color':'#b0b0c0',
+			'fontSize':'9pt',
+			'width':'100%',
+			'textAlign':'center'
+		},
+ " "// <-스크롤시킬 글자넣을 곳"
+));
+
+	O.push(new Cobj(1,0,
+		{
+			'color':'#9090f0',
+			'fontSize':'22pt',
+			'top':'10px'
+		},
+	        	""// <-스크롤시킬 글자넣을 곳 
+	));
+
+	O.push(new Cobj(-2,0,
+		{
+			'color':'#225599',
+			'fontSize':'9pt',
+			'top':'30%'
+		},
+		"ICS 4.0.3 스마트폰으로 방문하셨다면 <font color=#7aa605>Opera Mobile 브라우져</font>를 권장합니다. <font color=#e33333>진저브래드 2.3</font> 이 설치된 폰의 경우 <font color=##008080>돌핀브라우저</font>가 최적화입니다."// <-스크롤시킬 글자넣을 곳 
+	));
+
+	run();
+
+}
+
+
+</script>
+</head>
+
+<body oncontextmenu="return false">
+
+</body>
+</html>
+

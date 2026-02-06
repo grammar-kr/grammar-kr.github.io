@@ -1,0 +1,202 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<html>
+  <head>
+    <title>영문법</title>
+     <meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+     <link rel=stylesheet hrefF='grammar.css' type='text/css'>
+     <meta name="description" content="영문법, 영어, grammar, 전치사, 조동사, ">
+     <meta name="keywords" content="영문법, grammar, 영어, 전치사, 조동사, ">
+     <meta name="Author" content="grammar, 영문법, 영어, 심희섭,">
+     <meta name="classification" content="영어, 영문법, grammar, 전치사, 조동사,">
+
+   <style type="text/css">
+    <!--
+    body,html{background-color:#ffffff;
+    scrollbar-face-color:#ffffff;
+    scrollbar-3dlight-color:#ffffff;
+    scrollbar-darkshadow-color:#ffffff;
+    scrollbar-track-color:#ffffff;
+    scrollbar-arrow-color:#ffffff;
+    scrollbar-highlight-color:#ffffff;
+             }-->
+   </style>
+
+   <style type=text/css>
+
+    a:link { color: #999999; text-decoration: none; }
+    a:visited {	color: #999999; text-decoration: none; }
+    a:active { color: #999999; text-decoration: none; }
+    a:hover {  color: #bbbbbb; text-decoration: underline; }
+    td { font-size: 10pt; font-family: verdana, arial; }
+    div { font-size: 10pt; font-family: verdana, arial; text-decoration: none; }
+    span { font-size: 10pt; font-family:  verdana, arial; text-decoration: none; color: #3a3a3a;} 
+
+    </style>
+
+<style type="text/css">
+	html {
+		overflow: hidden;
+	}
+	body {
+		margin: 0px;
+		padding: 0px;
+		background: #ffffff;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+	}
+
+	span {
+		position: absolute;
+		font-family: verdana,arial;
+		font-weight: bold;
+		width: 100%;
+	}
+
+
+</style>
+
+
+<script type="text/javascript">
+// ===============================================
+// script by Gerard Ferrandez - Sept 1999
+// DOM crossbrowser version - April 14th, 2006
+// http://www.dhteumeuleu.com
+// ===============================================
+
+var O = [];
+
+function Cobj(xs, ys, css, html){
+	this.xs = xs;
+	this.ys = ys;
+	this.m = 1;
+	this.x = xs * 10000;
+	this.y = ys * 10000;
+	this.o = document.createElement("span");
+	this.o.innerHTML = html;
+	for(var i in css)this.o.style[i] = css[i];
+	document.body.appendChild(this.o);
+	this.mov = function () {
+		with(this) {
+			if(xs!=0){
+				x += xs;
+				o.style.left = x+'px';
+				if(xs>0 && x>document.body.offsetWidth) x = -o.offsetWidth;
+				else if(xs<0 && x<-o.offsetWidth) x = document.body.offsetWidth;
+			}
+			if(ys!=0){
+				y += ys;
+				o.style.top = y+'px';
+				if(ys>0 && y>document.body.offsetHeight) y = -o.offsetHeight;
+				else if(ys<0 && y<-o.offsetHeight) y = document.body.offsetHeight;
+			}
+		}
+	}
+}
+
+function run(){
+	for(var i in O)O[i].mov();
+	setTimeout("run();", 52);
+}
+
+onload = function(){
+	O.push(new Cobj(0,1,
+		{
+			'color':'gold',
+			'fontSize':'20pt',
+			'letterSpacing':'-0px',
+			'textAlign':'left'
+		},
+		""// <-스크롤시킬 글자넣을 곳
+	));
+
+	O.push(new Cobj(0,-2,
+		{
+			'color':'#c0c0c0',
+			'fontSize':'10pt',
+			'left':'25%'
+		},
+		""// <-스크롤시킬 글자넣을 곳 
+	));
+
+	O.push(new Cobj(-1,0,
+		{
+			'color':'#888',
+			'fontSize':'48pt',
+			'top':'25%'
+		},
+		""// <-스크롤시킬 글자넣을 곳 
+	));
+
+	O.push(new Cobj(3,0,
+		{
+			'color':'#fff',
+			'fontSize':'14pt',
+			'top':'55%'
+		},
+		""// <-스크롤시킬 글자넣을 곳 
+	));
+
+	O.push(new Cobj(2,0,
+		{
+			'color':'#ff8000',
+			'fontSize':'16pt',
+			'top':'65%'
+		},
+		""// <-스크롤시킬 글자넣을 곳 
+	));
+
+	O.push(new Cobj(0,2,
+		{
+			'color':'#b0b0c0',
+			'fontSize':'18pt',
+			'left':'10%'
+		},
+		""// <-스크롤시킬 글자넣을 곳 
+	));
+
+	O.push(new Cobj(0,-1,
+		{
+			'color':'darkgray',
+			'fontSize':'9pt',
+			'width':'100%',
+			'textAlign':'center'
+		},
+		
+"<font color=#b16080>God &nbsp;is &nbsp;love</font><p><br>인간의 종이 되지 말지니<p>사람의 마음에 들기 위하여<br>살거나<br>말하거나<br>행동하지 말라.<p>그리하면<br> 네 생명의 힘이 상실된다.<p>사람의 꾸지람이나 칭찬으로 부터<br>제왕처럼 자유하라.<p>무엇보다 주의 종이 되며<br>하나님의 마음에 들도록 유의하라.<p>그러면<br>네가 많은 사람을 축복할 수 있으며<p>훗날 주의 종으로서<br>주님 곁에 서게 될 것이다.<p><i>MOTHER  BASILLEA</i>"         
+ 
+	));
+
+	O.push(new Cobj(1,0,
+		{
+			'color':'#9090f0',
+			'fontSize':'22pt',
+			'top':'10px'
+		},
+	        	""// <-스크롤시킬 글자넣을 곳 
+	));
+
+	O.push(new Cobj(-2,0,
+		{
+			'color':'#8080ff',
+			'fontSize':'20pt',
+			'top':'60%'
+		},
+		""// <-스크롤시킬 글자넣을 곳 
+	));
+
+	run();
+
+}
+
+
+</script>
+</head>
+
+<body oncontextmenu="return false">
+
+</body>
+</html>
+
