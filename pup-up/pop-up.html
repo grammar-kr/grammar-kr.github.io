@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+  <!-- 구글폰트  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+  <script src="main.js" defer></script>
+  <!-- 구글폰트끝  -->
+
+  <title>팝업</title>
+
+  <!-- pop-up 용 -->
+  <link rel="stylesheet" href="./page.css">
+  <link rel="stylesheet" href="./pop-up.css">
+  
+  <!-- pop-up 끝 -->
+
+</head>
+<body>
+  <div class="container" id="blur">
+    <div class="content">
+      <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque tenetur ducimus dolorum nihil esse, natus suscipit</h2> 
+      <img src="./images/aux AND art.png" alt="">
+      <a href="./auxil/page-sample.html" target="Show" onclick="toggle()">Read More</a>
+
+    </div>
+  </div>
+  <div id="popup">
+     <font size="5" color="darkgray" c>참조용 미리보기</font>
+      <iframe src="#"  width="99.9%" height="300vh" frameborder="0" scrolling="auto" name="Show" style="filter: Alpha(Opacity=100)" alt="grammar contents"></iframe> 
+      <button id="btni"><a href="#" onclick="toggle()">Close</a></button>
+  </div>
+
+
+  <script type="text/javascript">
+    function toggle(){
+      var blur = document.getElementById('blur');
+      blur.classList.toggle('active')
+      var popup = document.getElementById('popup');
+      popup.classList.toggle('active')
+    }
+  </script>
+</body>
+</html>

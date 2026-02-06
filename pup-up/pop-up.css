@@ -1,0 +1,220 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+:root {
+  /* 다크/라이트 */
+  --primary: #e9bdd9;
+  --secondary: #181818;
+  --background: whitesmoke;
+
+  --role-name: dodgerblue;
+  --role-word: #b16080;
+  --word-concept-line: #b16080;   
+
+  --interpretation: darkgray;
+  --s-text: rgb(141, 139, 139);
+  --colon: #000;
+  --switch: dodgerblue;
+  --p-color: #000;
+  --hover: dodgerblue;
+  --colspan-s-text: darkgray;
+  --colspan-arrow:  rgb(158, 155, 155);
+  --plus: #d81e0c;
+
+  --markcolor: dodgerblue;
+  --mark-bg-color: #11faa9;
+
+  --gold: gold;
+  --skyblue: dodgerblue;
+  --darkpink:  #b16080;
+  --lightgreen: #11faa9;
+  --sky: rgb(210, 239, 251);
+  --blue: blue;
+ 
+
+  --td-bold-white: whitesmoke;
+  --td-bold-red: #d81e0c;
+  --td-bold-green: #11faa9;
+  --td-bold-darkpink: #b16080;
+  --td-bold-blue: dodgerblue;
+
+  
+  --line-dot-black: black;
+  --line-dot-green: #11faa9;
+  --line-dot-red: #d81e0c;
+  --line-dot-blue: dodgerblue;
+  --line-dot-gold: gold;
+  
+  --line-solid-black: black;
+  --line-solid-green: #11faa9;
+  --line-solid-red: #d81e0c;
+  --line-solid-blue: dodgerblue;
+  --line-solid-gold: gold;
+ 
+  --darkgray: darkgray;
+  --accodion-role-word: #b16080;
+  --red: #d81e0c;
+  --white: whitesmoke;
+
+}
+
+/* 다크 */
+
+.dark-mode{
+  --primary: #11faa9;
+  /* --primary: #d81e0c; */
+  --secondary: whitesmoke;
+  --background: rgb(30,30,30);
+  --word-name-text: gold;
+  --word-concept-line: #11faa9; 
+  --role-word: #11faa9;
+  --role-name: gold;
+  --skyblue: dodgerblue;
+  --s-text: lightgray;
+  --td-bold-green: #0fdfdf;
+  --colon: whitesmoke;
+  --switch: gold;
+  --p-color: whitesmoke;
+  --concept-text:  whitesmoke;
+  --hover: dodgerblue;
+  --colspan-s-text: darkgray;
+  --colspan-arrow:  lightgray;
+  --plus: gold;
+  --markcolor: gold;
+  --mark-bg-color: gold;
+  --gold: #11faa9;
+  --darkpink:#11faa9;
+  --black: #000;
+  --white: rgb(30,30,30);
+  --blue: red;
+  --lightgreen: gold;
+  --sky: rgb(255, 231, 96);
+  --red:dodgerblue;
+
+  --td-bold-white: whitesmoke;
+  --td-bold-red: #d81e0c;
+  --td-bold-green: #b16080;
+  --td-bold-darkpink: #11faa9;
+  --td-bold-blue: dodgerblue;
+
+  /* --line-dot-black: whitesmoke; */
+  --line-dot-green: #11faa9;
+  --line-dot-red: #d81e0c;
+  --line-dot-blue: gold;
+  --line-dot-gold: gold;
+  
+  --line-solid-black: whitesmoke;
+  --line-solid-green: #11faa9;
+  --line-solid-red: #d81e0c;
+  --line-solid-blue: dodgerblue;
+  --line-solid-g0ld: gold;
+
+  --accodion-role-word: #11faa9;
+/* 다크끝 */
+}
+
+/*  00  */
+html {font-size: 1rem;}    
+
+   
+/*  00  */
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  letter-spacing: 0.01em;    
+  background-color: var(--background);
+  -ms-overflow-style: none;/* 스크롤바 */
+}
+
+body::-webkit-scrollbar {
+display: none;
+}/* 스크롤바 */
+
+a {
+ 
+  text-decoration: underline;
+  color: var(--red);
+ 
+} 
+
+p{
+ 
+  font-weight: 500;
+}
+.main-p{
+  padding-left: 1px;
+}
+/* 다크 */
+.switch{
+  position: absolute;
+  top:96px;
+  left: 88%;
+  border: 1px dotted var(--darkgray);
+  padding: 4px 12px;
+  border-radius: 5px;
+  color: var(--switch);
+  background: var(--colon);
+  font-size: 24px;
+  margin-left: 15px;
+  cursor: pointer;
+}
+.mode{
+  font-size: 12px;
+  font-weight: 300;
+}
+/* 다크 끝*/
+/*  00 */
+.container {
+  /* display: block; */
+  position: relative;
+  background-color:none;
+  /* outline: 1px solid red; */
+  width: 60em;
+  height: auto;
+  margin: 0 auto; 
+  max-width: 49em !important; 
+  transition: 0.5s; 
+  padding: 20px;
+}
+.container#blur.active{
+  filter: blur(2px);
+  pointer-events: none;
+  user-select: none;
+
+}
+.container .content{
+  position: relative;
+  min-width: 800px;
+}
+h2{
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: 000;
+}
+/* .container .content img{
+  max-width: 100%;
+  display: block;
+} */
+#popup{
+  position: relative;
+  top: 30%;
+  left: 62%;
+  transform: translate(-50%,-50%);
+  width: 450px;
+  padding: 1px;
+  box-shadow: 0px 5px 30px rgba(0,0,0 .3); 
+  background: var(--darkgray);
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+}
+#popup.active{
+  top: 50%;
+  visibility: visible;
+  opacity: 1;
+  transition: 0.5s;
+}
+
