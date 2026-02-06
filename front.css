@@ -1,0 +1,51 @@
+
+
+/* 트랜지션용 */
+
+.main-front{
+ 
+  display:block;
+  text-align: left;
+  width: 90%;
+  height: 100vh;
+ 
+  margin: 70px auto;     
+  outline: 0px solid gold;
+  position: absolute;
+  top: 550px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: all 2.4s ease-out;
+  font-size: 1em;
+  transform: translate(-50%, -50%);
+  color: var(--white);
+}
+.main-front p{
+  display:block;
+  text-align: left;
+  width: 100%;     
+  margin-left: 1%;
+  color: var(--white);
+  word-break: keep-all;
+  border: 0px solid  #ff0000;
+         
+}
+.h3{ 
+  position: relative;        
+  margin-left: 1%;
+  color: var(--blue);
+  font-size: 1.3em;
+  font-weight: 700;
+}
+
+@keyframes all {
+  from{
+   left: 50%;
+   opacity: 0;
+  }
+  to{
+    left: 50%;
+   opacity: 1;
+
+  }
+}
