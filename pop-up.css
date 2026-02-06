@@ -1,0 +1,530 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+:root {
+  /* 다크/라이트 */
+  --primary: #e9bdd9;
+  --secondary: #181818;
+  --background: whitesmoke;
+
+  --role-name: dodgerblue;
+  --role-word: #b16080;
+  --word-concept-line: #b16080;   
+
+  --interpretation: darkgray;
+  --s-text: rgb(141, 139, 139);
+  --colon: #000;
+  --switch: dodgerblue;
+  --p-color: #000;
+  --hover: dodgerblue;
+  --colspan-s-text: darkgray;
+  --colspan-arrow:  rgb(158, 155, 155);
+  --plus: #d81e0c;
+
+  --markcolor: dodgerblue;
+  --mark-bg-color: #11faa9;
+
+  --gold: gold;
+  --skyblue: dodgerblue;
+  --darkpink:  #b16080;
+  --lightgreen: #11faa9;
+  --sky: rgb(210, 239, 251);
+  --blue: blue;
+  --skyblue1: rgba(2, 16, 213, 0.821);
+  --darkgray: darkgray;
+  --close: rgba(106, 161, 250, 0.7);
+
+ 
+
+  --td-bold-white: whitesmoke;
+  --td-bold-red: #d81e0c;
+  --td-bold-green: #11faa9;
+  --td-bold-darkpink: #b16080;
+  --td-bold-blue: dodgerblue;
+
+  
+  --line-dot-black: black;
+  --line-dot-green: #11faa9;
+  --line-dot-red: #d81e0c;
+  --line-dot-blue: dodgerblue;
+  --line-dot-gold: gold;
+  
+  --line-solid-black: black;
+  --line-solid-green: #11faa9;
+  --line-solid-red: #d81e0c;
+  --line-solid-blue: dodgerblue;
+  --line-solid-gold: gold;
+ 
+  --darkgray: darkgray;
+  --accodion-role-word: #b16080;
+  --red: #d81e0c;
+  --white: whitesmoke;
+  --black: rgb(30, 30, 30);
+  --shadow:   rgba(4, 102, 250, 0.7);
+  --link: blue;
+
+}
+
+/* 다크 */
+
+.dark-mode{
+  --primary: #11faa9;
+  /* --primary: #d81e0c; */
+  --secondary: whitesmoke;
+  --background: rgb(30,30,30);
+  --word-name-text: gold;
+  --word-concept-line: #11faa9; 
+  --role-word: #11faa9;
+  --role-name: gold;
+  --skyblue1: rgb(124, 255, 30);
+  --s-text: lightgray;
+  --td-bold-green: #0fdfdf;
+  --colon: whitesmoke;
+  --switch: gold;
+  --p-color: whitesmoke;
+  --concept-text:  whitesmoke;
+  --hover: dodgerblue;
+  --colspan-s-text: darkgray;
+  --colspan-arrow:  lightgray;
+  --plus: gold;
+  --markcolor: gold;
+  --mark-bg-color: gold;
+  --gold: #11faa9;
+  --darkpink:#11faa9;
+  --black: #fff;
+  --white: rgb(30,30,30);
+  --black: whitesmoke;
+  --blue: red;
+  --lightgreen: gold;
+  --skyblue: rgb(255, 231, 96);
+  --red:dodgerblue;
+  --shadow: #20c289;
+  --close: #22b380;
+  --link: gold;
+
+  --td-bold-white: whitesmoke;
+  --td-bold-red: #d81e0c;
+  --td-bold-green: #b16080;
+  --td-bold-darkpink: #11faa9;
+  --td-bold-blue: dodgerblue;
+
+  /* --line-dot-black: whitesmoke; */
+  --line-dot-green: #11faa9;
+  --line-dot-red: #d81e0c;
+  --line-dot-blue: gold;
+  --line-dot-gold: gold;
+  
+  --line-solid-black: whitesmoke;
+  --line-solid-green: #11faa9;
+  --line-solid-red: #d81e0c;
+  --line-solid-blue: dodgerblue;
+  --line-solid-g0ld: gold;
+
+  --accodion-role-word: #11faa9;
+
+/* 다크끝 */
+}
+
+
+
+
+/*  00  */
+/* html {font-size: 1rem;}     */
+
+   
+/*  00  */
+body {
+  font-family: 'Open Sans', sans-serif;
+
+  -ms-overflow-style: none;/* 스크롤바 */
+}
+
+body::-webkit-scrollbar {
+display: none;
+}/* 스크롤바 */
+
+a {
+
+  text-decoration: none;
+  color: var(--blue);
+ 
+} 
+
+p{
+ 
+  font-weight: 500;
+
+}
+.main-p{
+  padding-left: 1px;
+}
+
+/*  00 */
+
+
+h2{
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: 000;
+}
+/* .container .content img{
+  max-width: 100%;
+  display: block;
+} */
+
+
+
+/*  토글용 팝업시작 */
+#popup{
+  position:fixed;
+  top: 29%;  
+  left:50%;
+  transform: translate(-50%,-50%);
+  width: 450px;
+  
+  padding: 5px;
+  box-shadow: 11px 11px 111px 15px var(--shadow); 
+  border-radius: 20px;
+  background: var(--darkgray);
+
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.7s all ease-in-out;
+  z-index: 1000;
+}
+#popup.active{
+  top: 29%;
+  visibility: visible;
+  opacity: 1;
+  transition: 0.7s ease-in-out;
+}
+
+#popup .close{
+  position: absolute;
+  right: 1px; top: 1px;
+  color: whitesmoke;
+  background-color: var(--close);
+  display: inline-block;
+  padding: 9px 4px;
+  border-radius: 12px;
+}
+#popup .close:hover{
+  text-decoration: underline;  
+  background-color: var(--shadow);
+}
+
+
+@media(min-width:768px){
+  #popup{
+    position:fixed;
+    top: 24%;  
+    left:50%;
+    transform: translate(-50%,-50%);
+    width: 780px;
+    
+    padding: 5px;
+    box-shadow: 11px 11px 111px 15px var(--shadow); 
+    border-radius: 20px;
+    background: var(--darkgray);
+  
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.7s all ease-in-out;
+    z-index: 1000;
+  }
+  }
+
+/* 메인 페이지 링크할 단어에 삽입<a href="./table-auxil.html" target="pop-show" onclick="toggle()" title="다시 클릭하면 팝업 사라짐">개연성</a> */
+/* 토글용 팝업 끝 */
+
+
+
+
+
+/* 첫번쩨 레이어 팝업 */
+#layer{
+  display: none;
+  position: fixed; right: 17%; top: 20px; width: 47em;
+  font-size: 0.9em;
+  box-shadow: 5px 5px 15px var(--shadow);
+  background-color: var(--darkgray);
+  z-index: 1;  
+  /* border: 1px solid red; */
+}
+#layer .close{
+  position: absolute;
+  right: 1px; top: 1px;
+  color: whitesmoke;
+  background-color: var(--close);
+  display: inline-block;
+  padding: 9px 4px;
+  border-radius: 4px;
+}
+#layer .close:hover{
+  text-decoration: underline;  
+  background-color: var(--shadow);
+}
+.layer {
+  text-decoration: solid underline skyblue;  
+  padding-right: 1px;
+  font-weight: 500;
+  /* border: 1px dotted ; *//*  링크 글자 사각틀 꾸밈 */
+  /* border-radius: 6px; */
+  color: var(--skyblue);  /* layer popup 에 쓰이는 글자 꾸밈 */
+}
+.layer:hover {
+  text-decoration: dotted underline var(--black);  
+  color: var(--link);
+  cursor: pointer;
+  
+}
+
+/* 두번째 팝업 */
+
+#layer1{
+  display: none;
+  position: fixed; right: 17%; top: 20px; width: 47em;
+  font-size: 0.9em;
+  box-shadow: 5px 5px 15px var(--shadow);
+  background-color: var(--darkgray);
+  z-index: 1;  
+  /* border: 1px solid red; */
+}
+#layer1 .close{
+  position: absolute;
+  right: 1px; top: 1px;
+  color: whitesmoke;
+  background-color: var(--close);
+  display: inline-block;
+  padding: 9px 4px;
+  border-radius: 4px;
+}
+#layer1 .close:hover{
+  text-decoration: underline;  
+  background-color: var(--shadow);
+}
+
+.layer1 {
+  text-decoration: solid underline skyblue;  
+  padding-right: 1px;
+  font-weight: 500;
+  /* border: 1px dotted ; */
+  /* border-radius: 6px; */
+  color: var(--skyblue);  /* layer popup 에 쓰이는 글자 꾸밈 */
+}
+.layer1:hover {
+  text-decoration: dotted underline var(--black);  
+  color: var(--link);
+  cursor: pointer;
+  
+}
+/* 두번째 팝업 */
+
+/* 세번째 팝업 */
+#layer2{
+  display: none;
+  position: fixed; right: 17%; top: 20px; width: 47em;
+  font-size: 0.9em;
+  box-shadow: 5px 5px 15px var(--shadow);
+  background-color: var(--darkgray);
+  z-index: 1;  
+  /* border: 1px solid red; */
+}
+#layer2 .close{
+  position: absolute;
+  right: 1px; top: 1px;
+  color: whitesmoke;
+  background-color: var(--close);
+  display: inline-block;
+  padding: 9px 4px;
+  border-radius: 4px;
+}
+#layer2 .close:hover{
+  text-decoration: underline;  
+  background-color: var(--shadow);
+}
+
+.layer2 {
+  text-decoration: solid underline skyblue;  
+  padding-right: 1px;
+  font-weight: 500;
+  /* border: 1px dotted ; */
+  /* border-radius: 6px; */
+  color: var(--skyblue);  /* layer popup 에 쓰이는 글자 꾸밈 */
+}
+.layer2:hover {
+  text-decoration: dotted underline var(--black);  
+  color: var(--link);
+  cursor: pointer;
+  
+}
+/* 네번째 팝업 */
+#layer3{
+  display: none;
+  position: fixed; right: 17%; top: 20px; width: 47em;
+  font-size: 0.9em;
+  box-shadow: 5px 5px 15px var(--shadow);
+  background-color: var(--darkgray);
+  z-index: 1;  
+  /* border: 1px solid red; */
+}
+#layer3 .close{
+  position: absolute;
+  right: 1px; top: 1px;
+  color: whitesmoke;
+  background-color: var(--close);
+  display: inline-block;
+  padding: 9px 4px;
+  border-radius: 4px;
+}
+#layer3 .close:hover{
+  text-decoration: underline;  
+  background-color: var(--shadow);
+}
+
+.layer3{
+  text-decoration: solid underline skyblue;  
+  padding-right: 1px;
+  font-weight: 500;
+  /* border: 1px dotted ; */
+  /* border-radius: 6px; */
+  color: var(--skyblue);  /* layer popup 에 쓰이는 글자 꾸밈 */
+}
+.layer3:hover {
+  text-decoration: dotted underline var(--black);  
+  color: var(--link);
+  cursor: pointer;
+  
+}
+/* 다섯번째 팝업 */
+#layer4{
+  display: none;
+  position: fixed; right: 17%; top: 20px; width: 47em;
+  font-size: 0.9em;
+  box-shadow: 5px 5px 15px var(--shadow);
+  background-color: var(--darkgray);
+  z-index: 1;  
+  /* border: 1px solid red; */
+}
+#layer4 .close{
+  position: absolute;
+  right: 1px; top: 1px;
+  color: whitesmoke;
+  background-color: var(--close);
+  display: inline-block;
+  padding: 9px 4px;
+  border-radius: 4px;
+}
+#layer4 .close:hover{
+  text-decoration: underline;  
+  background-color: var(--shadow);
+}
+
+.layer4{
+  text-decoration: solid underline skyblue;  
+  padding-right: 1px;
+  font-weight: 500;
+  /* border: 1px dotted ; */
+  /* border-radius: 6px; */
+  color: var(--skyblue);  /* layer popup 에 쓰이는 글자 꾸밈 */
+}
+.layer4:hover {
+  text-decoration: dotted underline var(--black);  
+  color: var(--link);
+  cursor: pointer;
+  
+}
+@media(max-width:800px){
+  #layer{
+    display: none;
+    position: fixed; right: 15%; top: 20px; width: 40em;
+    box-shadow: 5px 5px 15px var(--shadow);
+    background-color: var(--darkgray);
+    z-index: 1;  
+    /* border: 1px solid red; */
+   
+  }
+  #layer1{
+    display: none;
+    position: fixed; right: 15%; top: 20px; width: 40em;
+    box-shadow: 5px 5px 15px var(--shadow);
+    background-color: var(--darkgray);
+    z-index: 1;  
+    /* border: 1px solid red; */
+  }
+  #layer2{
+    display: none;
+    position: fixed; right: 15%; top: 20px; width: 40em;
+    box-shadow: 5px 5px 15px var(--shadow);
+    background-color: var(--darkgray);
+    z-index: 1;  
+    /* border: 1px solid red; */
+  }
+  #layer3{
+    display: none;
+    position: fixed; right: 15%; top: 20px; width: 40em;
+    box-shadow: 5px 5px 15px var(--shadow);
+    background-color: var(--darkgray);
+    z-index: 1;  
+    /* border: 1px solid red; */
+  }
+  #layer4{
+    display: none;
+    position: fixed; right: 15%; top: 20px; width: 40em;
+    box-shadow: 5px 5px 15px var(--shadow);
+    background-color: var(--darkgray);
+    z-index: 1;  
+    /* border: 1px solid red; */
+  }
+}
+@media(max-width:644px){
+  #layer{
+    display: none;
+    position: fixed; left: 3%; top: 17px; width: 95%;
+    box-shadow: 5px 5px 15px var(--shadow);
+    background-color: var(--darkgray);
+    z-index: 1;  
+    /* border: 1px solid red; */
+   
+  }
+  #layer1{
+    display: none;
+    position: fixed; left: 3%; top: 17px; width: 95%;
+    box-shadow: 5px 5px 15px var(--shadow);
+    background-color: var(--darkgray);
+    z-index: 1;  
+    /* border: 1px solid red; */
+  }
+  #layer2{
+    display: none;
+    position: fixed; left: 3%; top: 17px; width: 95%;
+    box-shadow: 5px 5px 15px var(--shadow);
+    background-color: var(--darkgray);
+    z-index: 1;  
+    /* border: 1px solid red; */
+  }
+  #layer3{
+    display: none;
+    position: fixed; left: 3%; top: 17px; width: 95%;
+    box-shadow: 5px 5px 15px var(--shadow);
+    background-color: var(--darkgray);
+    z-index: 1;  
+    /* border: 1px solid red; */
+  }
+  #layer4{
+    display: none;
+    position: fixed; left: 3%; top: 17px; width: 95%;
+    box-shadow: 5px 5px 15px var(--shadow);
+    background-color: var(--darkgray);
+    z-index: 1;  
+    /* border: 1px solid red; */
+  }
+}
+
+
+
+  
+
+  
