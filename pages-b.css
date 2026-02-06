@@ -1,0 +1,1084 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+   }
+
+:root {
+  /* 다크/라이트 */
+   
+  --colspan-s-text: rgb(153, 151, 151);
+  --colspan-arrow:  rgb(154, 152, 152);
+  --interpretation: rgb(150, 147, 147);
+  
+  --plus: red;
+  --switch: dodgerblue;
+  --background: whitesmoke;
+  --role-word:  #d64b80;
+  --over: dodgerblue;
+  --mark: var(--black);
+  --shadow:  rgba(30, 30, 30, .8);
+    
+  --line-dot-black:  rgb(0, 0, 0);
+  --line-dot-darkgreen: #00bbbb;
+  --line-dot-darkpink: #d64b80;
+  --line-dot-blue: dodgerblue;
+  --line-dot-gold: rgb gold;
+  
+  --line-solid-black: rgb(0, 0, 0);
+  --line-solid-darkgreen: #00bbbb;
+  --line-solid-darkpink: #d64b80;
+  --line-solid-blue:dodgerblue;
+  --line-solid-gold: gold;
+
+  --red: rgb(243, 4, 4);
+  --white: rgb(234, 234, 234);
+    /* 배경색 */
+  --black: rgb(0, 0, 0);
+  --darkgray: rgb(153, 153, 153);
+  --lightgray: rgb(173, 171, 171);
+  --gold: gold;
+  --rolepink:#d64b80;
+  --skyblue: rgb(69, 163, 200);
+  --darkpink: #d64b80;
+  --darkgreen: #00bbbb;
+  --green:rgb(6, 212, 119);
+
+      /* agb(0, 92, 183) */
+  --darkblue: rgb(5, 185, 104);
+  --markk: #ccffe6;
+  --blue: dodgerblue;
+
+  --markblue: rgb(130, 212, 163);
+  --markgreen: #6de3e3;
+  --markpink: #f986b2;
+}
+
+/* 다크 */
+
+.dark-mode{     
+  --colspan-s-text: rgb(183, 180, 180);
+  --colspan-arrow:  rgb(183, 180, 180);
+  --interpretation: rgb(184, 184, 184);
+  
+  --plus: gold;
+  --switch: gold;
+  --background: rgb(0, 0, 0);
+  --role-word: #00bbbb;  
+  --over: dodgerblue;
+  --shadow:  rgba(250, 250, 250, 1);
+
+  --line-dot-black:  whitesmoke;
+  --line-dot-darkgreen: #d64b80;
+  --line-dot-darkpink: #00bbbb;
+  --line-dot-blue: gold;
+  --line-dot-gold: #d81e0c;
+  
+  --line-solid-black:  whitesmoke;
+  --line-solid-darkgreen: #d64b80;
+  --line-solid-darkpink: #00bbbb;
+  --line-solid-blue: dodgerblue;
+  --line-solid-gold: #d81e0c;
+
+  --red: #d81e0c;
+  --white: rgb(0, 0, 0);
+  --darkgray: rgb(174, 174, 174);
+  --lightgray: rgb(179, 175, 175);
+  --gold: dodgerblue;
+  --darkpink:   #01c9c9;
+  --darkgreen: #d64b80;
+  --green: rgb(19, 250, 146);
+  --blue: gold;
+  --black: rgb(234, 234, 234);  
+  /* 글자색 */
+  --skyblue: rgb(232, 232, 30);
+  --markk: #f9cddd;
+  --rolepink:#00bbbb;
+  --darkblue: rgb(19, 250, 146);
+
+  --markblue: rgb(35, 194, 99);
+  --markgreen: #ad1c53;
+  --markpink: #0c9a9a;
+}
+  /* 다크끝 */
+
+html{
+  font-size: 1rem;
+  scroll-behavior: smooth; 
+  scroll-snap-type: y mandatory;
+  scroll-padding-top: 70px; 
+ 
+  /* navbar 높이만큼 */
+}
+body{
+   font-size: 1em;
+   font-family: 'Open Sans', sans-serif;
+   font-family: 'Noto Sans KR', sans-serif;
+   
+   
+
+
+   background-color: var(--white);
+   background-attachment: fixed;
+   /* -ms-overflow-style: none; */
+   /* 스크롤바 */
+}
+
+body::-webkit-scrollbar {
+display: none;
+}
+/* 스크롤바 */
+
+/* a{
+  text-decoration: underline dotted 1px; 
+  text-decoration-color: var(--black); 
+  text-underline-position: under;  */
+  /* color: var(--blue);
+  
+} */
+/* a:hover{
+  text-decoration: underline solid 1px; 
+  text-decoration-color: var(--black); 
+  text-underline-position: under; 
+color: var(--darkpink);
+  
+} */
+
+span {
+  display: none; /* 설명문 닫혀있게 함 */
+  margin-left: 0px; }
+a{
+  color: blue;
+  }
+
+p{ 
+  line-height: 1.56em; 
+  font-size: 1em; 
+  color: var(--black);
+  margin-top: 20px;
+
+  font-weight:400}
+small{
+    font-size: 0.83em;   
+    color: var(--darkgray);
+    }
+button{
+  all:unset;
+  border-radius: 5px;
+  
+}  
+  .bt{
+    width: auto;
+    font-size: 1em; 
+    color: var(--blue);
+    border: 0px;
+    background: none;
+    cursor: pointer;
+    text-decoration: underline dotted 1px; 
+    text-decoration-color: darkgray; 
+    text-underline-position: under;
+    }
+  
+  .bt:hover{
+    width: auto;
+    font-size: 1em;  
+        
+    cursor: pointer;
+    text-decoration: underline solid 1px; 
+    text-decoration-color: var(--blue); 
+    text-underline-position: under;
+    }
+    .dic-bt{
+      position: relative;
+      top:0px;
+      
+      width: auto;
+      font-size: 1em; 
+      color: var(--black);
+      border: 0px;
+      background: none;
+      cursor: pointer;
+      text-decoration: underline dotted 1px; 
+      text-decoration-color: lightgray; 
+      text-underline-position: under;
+      }
+    
+    .dic-bt:hover{
+      width: auto;
+      font-size: 1em;  
+          
+      cursor: pointer;
+      text-decoration: underline solid 1px; 
+      text-decoration-color: var(--black); 
+      text-underline-position: under;
+      }
+  
+
+mark{ 
+      background: var(--markk);
+      border-radius: 4px; 
+
+      }
+     .mark{  
+          background: var(--black);
+          border-radius: 4px; 
+          /* padding: -2px 0px;  */
+          color: var(--white);}
+.markgreen{  
+  background: var(--markgreen);
+  border-radius: 4px; 
+  padding: 0px 1px;
+  color: var(--black);}
+  .markblue{  
+    background: var(--markblue);
+    border-radius: 4px; 
+    padding: 0px 1px;
+    color: var(--black);}
+    .markpink{  
+      background: var(--markpink);
+      border-radius: 4px; 
+      padding: 0px 1px;
+      color: var(--black);}
+
+
+  /*  underline  */
+.bw-solid-line{
+  display: inline-block;
+  line-height: 1.56em;
+  text-decoration: underline solid 1px; 
+  text-decoration-color: var(--black); 
+  text-underline-position: under;}
+.bw-dotted-line{
+  display: inline-block;
+  line-height: 1.56empx;
+  text-decoration: underline dotted 1px; 
+  text-decoration-color: var(--black); 
+  text-underline-position: under;}
+  
+.pg-solid-line{
+      display: inline-block;
+      line-height: 1.56empx;
+      text-decoration: underline solid 1px; 
+      text-decoration-color: var(--darkpink); 
+      text-underline-position: under;  }
+.pg-dotted-line{
+  line-height: 1.56empx;
+      display: inline-block;
+      text-decoration: underline dotted 1px; 
+      text-decoration-color: var(--darkpink); 
+      text-underline-position: under;    }
+.gp-solid-line{
+        display: inline-block;
+        line-height: 1.56empx;
+        text-decoration: underline solid 1px; 
+        text-decoration-color: var(--darkgreen); 
+        text-underline-position: under;  }
+.gp-dotted-line{
+        display: inline-block;
+        line-height: 1.56empx;
+        text-decoration: underline dotted 1px; 
+        text-decoration-color: var(--darkgreen); 
+        text-underline-position: under;    }
+  /*  언더라인 끝*/
+
+
+
+.darkpink{ color: var(--darkpink);  line-height: 1.56em;}
+.darkgreen{ color: var(--darkgreen); line-height: 1.56em;}
+.darkblue{  color: var(--darkblue); line-height: 1.56em;}
+
+.skyblue{ color: var(--skyblue);}
+.red {color: var(--red);}
+.blue{ color: var(--blue);}
+.rolepink{ color: var(--rolepink);}
+.green{color: var(--green)}
+.gold{color: gold;}
+.black{  color: var(--black);
+}
+.darkgray{ color: gray ;} 
+
+
+
+
+.top-container{
+  display: block; 
+  position: sticky;
+  top:0px;  
+  line-height:20px;  
+  text-align: left;
+  width: 828px;
+  height: 71px;
+  border: 0px solid red;
+  background: var(--white);
+  /* padding-left: 10px; */
+  margin-top: 0px;
+  margin-bottom:30px;
+  z-index: 1;
+}
+.top-consept{
+  display: block; 
+  position: absolute;
+  top:0px;  
+  line-height:20px;  
+  text-align: left;
+  width: 820px;
+  height: 69px;
+  border: 0px solid rgb(19, 250, 146);
+  background: var(--white);
+  padding-left: 12px;
+  margin-left: 4px;
+  margin-top: 0px;
+  /* margin-bottom:10px; */
+}
+.top-role-word{
+  position: relative;
+  top:1.5px;
+  font-size: 1.6em;
+  font-weight: 800;
+  color: var(--rolepink); 
+  border: 0px solid  gold; }
+
+ .top-role-word-sub{
+  position: relative;
+  top:1px;
+  font-size: 1.1em;
+  color: var(--rolepink); 
+
+  
+  /* text-decoration: underline solid 1px; 
+  text-decoration-color: var(--darkpink); 
+  text-underline-position: under;  */
+}
+/*  00  */
+.center-hr  {
+  display: block;
+  position: absolute; 
+  top:70px;
+  width: 820px;   
+   
+  }
+
+   /*  상단 개념  */
+.concept-sm-text { 
+  display: inline-block; 
+  position: relative;
+  top:2px;
+  font-size: 0.83em;
+  color: var(--darkgray);
+  vertical-align: 2px;
+  font-weight: 200;
+  }
+ /*  상단 개념  */
+.concept-text {
+  font-size: 1.2em; 
+  font-weight: 700; 
+  margin-bottom: 25px;
+  color: var(--black) ;    
+  border: 1px solid var(--darkgray);
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;    
+}
+
+   /*  상단 역할개념  */
+.function{
+  position: relative;
+  top:.06em;
+  font-size: 0.85em;
+  color: var(--darkgreen);           
+  /* outline: 1px solid var(--darkgray);   */
+
+  }
+/*  상단 대괄호  */
+.collon{
+  position: relative;
+  top: .02em;
+  font-size: .83em;
+  font-weight: 300;
+  margin-top: 2px;
+  color: var(--darkgray);
+
+  }
+
+.domain{
+  display: block;
+  position: relative;
+  top: -1.8em;
+  left: 62%;
+
+  font-size: 0.83em; 
+  text-decoration: none; 
+  color: var(--lightgray); 
+  /* position: relative; 
+  right: -52em; 
+  top:-4em;  */
+  /* outline: solid 1px red; */
+  border: 0px dotted var(--darkgray);;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0; 
+  }
+.switch{
+  display: block;
+  position:fixed;
+  top: 3.8em;
+  
+  border: 1px dotted var(--darkgray);
+  padding: 1px 8px;
+  border-radius: 5px;
+  color: var(--switch);
+  background: var(--black);
+  font-size: 1em;
+  margin-left: 1.82em;
+  cursor: pointer; 
+  z-index: 1;
+}
+/* .righter { 
+    font-size: 0.8em; 
+    text-decoration: none; 
+    color: var(--darkgray); 
+    position: relative; 
+    right: -49em;  
+    top: 6px; 
+    outline: solid 0px red;
+    border: 1px dotted var(--darkgray);;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0; 
+    } */
+    /* .textzoom { 
+      font-size: 0.8em; 
+      text-decoration: none; 
+      color: var(--darkgray); 
+      position: relative; 
+      right: -49.7em;  
+      top: 18px; 
+      outline: solid 1px red;
+      border: 1px dotted var(--darkgray);;
+      border-left: 0;
+      border-right: 0;
+      border-top: 0; 
+      }
+       */
+.dark-light-zoom{
+  display: block; 
+  position: fixed;
+  top:4.5em; 
+  width: 5.9em;
+  height: 28px;
+  left:71%;
+  background-color: var(--white) ;
+  border: px solid red;
+  z-index: 1;
+  border-radius: 4px;
+}
+
+
+.intro{
+  display: block; 
+  position: relative;
+  top:1em;
+  line-height:20px;  
+  text-align: left;
+  width: 820px;
+  height: auto;
+  border: 0px solid #11faa9;
+  background: var(--white);
+  padding-left: 20px;
+  padding-bottom: 3em;
+}
+.intro p{  color: var(--black);}
+
+.wrap-table{
+  position: relative;
+  top: 30px;
+  left:1px; 
+  width: 800px;
+  margin: 0 auto;
+  border: 0px solid red;
+}
+
+.main-table{ 
+  /* border: 1px solid blue; */
+  width: 100%;
+}
+
+.all-sentence{
+  line-height:20px;  
+  text-align: left;
+  width: 800px;
+  background: var(--white);
+  /* border: 1px solid blue; */
+  padding-bottom: 8px;
+}
+/* .all-sentence:hover{
+  line-height:22px;  
+  text-align: left;
+  width: 800px;
+  background: var(--white);
+  padding-bottom: 0px;
+  cursor: pointer;
+} */
+.number{
+  font-size: 1.2em;
+  font-weight: 800;
+  color: var(--black); 
+}
+.role-sentence{
+  font-size: 1.2em;
+  font-weight: 800;
+  border: 0px solid  gold; 
+  color: var(--black); 
+}
+.role-sentence:hover{
+  font-size: 1.2em;
+  font-weight: 800;
+  color: var(--over)
+}
+.role-word{
+  color:var(--rolepink); 
+  border: 0px solid  gold;  
+  text-decoration: underline solid 1px; 
+  text-decoration-color: var(--black); 
+  text-underline-position: under;    
+  /* position: relative;
+  top: 0.02em; */
+}.role-word:hover{
+  color:var(--rolegreen);
+  padding: 0px 0px;
+  text-decoration: underline dotted 1px; 
+  text-decoration-color: var(--black); 
+  text-underline-position: under;    
+  /* position: relative;
+  top: 0.02em; */
+}
+.translation-table{
+  /* border: 1px solid rgb(47, 0, 255); */
+  width: 800px;
+  margin-top: 0.375em;
+  margin-left: 1.32em;
+ }
+
+.translation{
+  position: relative;
+  top: -5px;
+  font-size: 0.8em;
+  font-weight: 500;
+  padding: 4px 0px 0px 9px;
+ 
+  line-height:15px; 
+  color: var(--darkgray);
+  /* border: 1px solid rgb(255, 0, 0); */
+  }
+  .translation-rihgt{  
+     /*오타로 인한 중복  */
+    font-size: 0.8em;
+    padding: 4px 0px 0px 9px;
+    font-weight: 500;
+    line-height:15px; 
+    color: var(--darkgray);
+    /* border: 1px solid rgb(255, 0, 0); */
+    }
+    .translation-right{   
+      font-size: 0.8em;
+      padding: 4px 0px 0px 9px;
+      font-weight: 500;
+      line-height:15px; 
+      color: var(--darkgray);
+      /* border: 1px solid rgb(255, 0, 0); */
+      }
+ 
+
+ .explanation-table{
+  width: 800px;
+  margin-top: 0px;
+  margin-left: 0.0625em;
+  /* border: 1px solid rgb(255, 0, 0); */
+ }
+ .explanation{
+  /* border: 1px solid red; */
+  width: 800px;
+  padding-left: 10px;
+  padding-top: 1.3em;
+ 
+ }
+ .explanation p{
+  /* border: 1px solid green; */
+  width: 800px;  
+ 
+ }
+  /*  심층어휘 */
+  .d-s {
+    display: inline-block;
+    padding-top: 0.187em;
+    /* border: 1px solid red; */
+    font-style: italic;
+    line-height: 1.44em;
+    font-size: 0.9em;
+    color: var(--darkgray);/* 심층어휘 */
+    
+  }
+  .d-s-up {
+    display: inline-block;
+    padding-top: 0.187em;
+    /* border: 1px solid red; */
+    font-size: 0.87em;
+    line-height: 20px;
+    color: var(--darkgray);/* 심층어휘 */
+    
+  }
+  /* 00 */
+  .d-s-line {    
+    border: 1px dotted var(--hover);/* 심층어휘 밑줄 */
+    border-left: 0;
+    border-right: 0;
+    border-top: 0; 
+    border-bottom: 1;
+    
+   
+  }
+  /* 심층화 text 용 */
+.plus {
+  font-size: .8em; 
+  padding-top: 0.5em;
+  
+  text-decoration: none;
+  color: var(--darkgreen);  
+  /*  position: relative; left: 0px; top:0px; */
+  border: 0px solid var(--darkgreen);
+  border-left: 0;
+  border-right: 0;
+  border-top: 0; 
+  }
+  .concept-sm-text {
+    font-size: 0.83em;
+    color: var(--darkgray);
+    vertical-align: 2px;
+    font-weight: 500;
+    }
+    .sm-text {
+      font-size: 0.83em;
+      color: var(--darkgray);
+      /* border: 1px solid var(--darkgray); */
+      padding-top: 5px;
+        
+      
+  }
+   /*  심층구조 해석어  */
+   .colspan-s-text {
+    text-align: left;
+    padding-left: 5px;
+    font-style: normal;
+    font-size: 0.8em;
+    color: var(--darkgray);
+  }
+  .colspan-arrow {
+    text-align: left;
+    font-style: normal;
+    font-size: 0.8em;
+    color: var(--colspan-s-text);
+  }
+ 
+.book{
+ display: block;
+ position: relative; 
+ top:-68px; 
+ left: 364px;
+ width: 100px;
+ height: 150px; 
+ border: 0px solid red; 
+ }
+
+ .bottom-hr{
+  display: block;
+  position: relative; 
+  top:-75px;
+  width: 820px;   
+   
+ }
+ .footer-wrap {
+  display: block;
+  width: 100%;
+  height: 6.25em;
+  font-size: 0.9em; 
+  border: 0px solid blue;
+  position: relative;
+  top:-70px;
+  text-align: center;
+}
+.bottom-box{
+  position: relative;
+  left:-15px;
+  display: block;
+  width: 650px;
+  height: 7.625em;
+
+  border: 1px solid darkgray;
+  margin-left: 12px;
+  border-radius: 5px;
+}
+.bottom-box p{
+  margin-left: 3px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  outline: 0px red solid;
+}
+.bottom-box1{
+  position: relative;
+  display: block;
+  left:-15px;
+  width: 650px;
+  height: 4.75em;
+  border: 1px solid darkgray;
+  margin-left: 12px;
+  border-radius: 5px; 
+}
+.bottom-box1 p{
+  margin-left: 3px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  /* outline: 1px red solid; */
+}
+.footer-blue {
+  color: var(--black);
+}
+.footer-blue:hover {
+  color: var(--blue);
+}
+.Copyright{
+  color: var(--black);
+
+
+}
+
+/*  00  */
+
+
+.table {
+    
+  width:auto; 
+  border-spacing: 10px;
+
+  text-align:left;
+  border: 0.01em solid red;
+  border-collapse: collapse;  
+  /* border-collapse: separate;
+  border-spacing: 15px 10px;  */
+}
+/*  00  */
+th{
+  border: 0.01em solid rgb(0, 0, 0);
+ 
+  text-align: left;
+}
+/*  00  */
+                              td {  
+                                padding: 0px 0px 0px 0px;
+                                text-align: left;
+                                color: var(--black);
+
+                                /* border: 1px solid gray; */
+                                /* 테이블 보더 확인선 */
+                              }
+/*  00  */
+.table-p {
+ 
+/* inrto 도입문과 main-all 분석구조문 box text 좌우 이동 */  
+  display: inline-block;
+  margin-left: .4em;/* 분석구조문 box좌우 이동 */      
+  margin-top: 1em;/* 분석구조문 box상하 이동 */
+  border: 1px solid rgb(0, 255, 81); 
+}
+/*  00  */
+.table-m-p {
+     
+    display: inline-block;
+    margin-left: -0.15em;/* 분석구조문 box 좌우 이동 */      
+    margin-top: 0em;/* 분석구조문 box 상하 이동 */
+    /* border: 1px solid rgb(255, 0, 43);  */
+    
+  }
+  /*  00  */
+.td-bold{ 
+  font-size: 1.1em;   
+  font-weight: 800;
+  /* border: 1px solid rgb(106, 255, 0);  */
+}
+/* @media(min-width:1500px){
+  .switch{
+    position: absolute;
+    top:70px;
+    right: 0em;
+
+    
+    border: 1px dotted var(--darkgray);
+    padding: 1px 8px;
+    border-radius: 5px;
+    color: var(--switch);
+    background: var(--black);
+    font-size: 16px;
+    margin-left: 16px;
+    cursor: pointer; 
+    z-index: 1;
+  }
+    } */
+    /* @media(min-width:1000px){
+      .switch{
+        position: absolute;
+        top:70px;
+        right: 1em;
+    
+        
+        border: 1px dotted var(--darkgray);
+        padding: 1px 8px;
+        border-radius: 5px;
+        color: var(--switch);
+        background: var(--black);
+        font-size: 16px;
+        margin-left: 16px;
+        cursor: pointer; 
+        z-index: 1;
+      }
+        } */
+@media(max-width:1000px){
+
+  /* .switch{
+    position: absolute;
+    top:70px;
+    right: 22%;
+    border: 1px dotted var(--darkgray);
+    padding: 4px 12px;
+    border-radius: 5px;
+    color: var(--switch);
+    background: var(--black);
+    font-size: 24px;
+    margin-left: 15px;
+    cursor: pointer; 
+    z-index: 1;
+  } */
+  /* .righter { 
+    font-size: 0.8em; 
+    text-decoration: none; 
+    color: var(--darkgray); 
+    position: relative; 
+    right: -47em;  
+    top: 18px; 
+    outline: solid 1px red;
+    border: 1px dotted var(--darkgray);;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0; 
+    } */
+    /* .domain{
+      font-size: 0.8em; 
+      text-decoration: none; 
+      color: var(--darkgray); 
+      position: relative; 
+      right: -49em; 
+      top:-1em; 
+      outline: solid 1px red;
+      border: 0px dotted var(--darkgray);;
+      border-left: 0;
+      border-right: 0;
+      border-top: 0; 
+      } */
+      .book{
+        display: block;
+        position: relative; 
+        top:-68px; 
+        left: 324px;
+        width: 100px;
+        height: 150px; 
+        border: px solid red; 
+        }
+}
+@media(max-width:644px){
+  /* .dark-light-zoom{
+    display: block; 
+    position: fixed;
+    top:4.5em; 
+    width: 5.9em;
+    height: 45px;
+
+    background-color: var(--white) ;
+    border: 1px solid red;
+  } */
+  /* .switch{
+    position: absolute;
+    top:70px;
+    right: 45%;
+    border: 1px dotted var(--darkgray);
+    padding: 4px 12px;
+    border-radius: 5px;
+    color: var(--switch);
+    background: var(--black);
+    font-size: 24px;
+    margin-left: 15px;
+    cursor: pointer; 
+    z-index: 1;
+  } */
+
+  /* .righter { 
+    font-size: 0.8em; 
+    text-decoration: none; 
+    color: var(--darkgray); 
+    position: relative; 
+    right: -117em;  
+    top: 18px; 
+    outline: solid 1px red;
+    border: 1px dotted var(--darkgray);;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0; 
+    } */
+    /* .domain{
+      font-size: 0.8em; 
+      text-decoration: none; 
+      color: var(--darkgray); 
+      position: relative; 
+      right: -40em; 
+      top:-4em; 
+      outline: solid 1px red;
+      border: 0px dotted var(--darkgray);;
+      border-left: 0;
+      border-right: 0;
+      border-top: 0; 
+      } */
+
+  .book{
+    display: block;
+    position: relative; 
+    top:-68px; 
+    left: 205px;
+    width: 100px;
+    height: 150px; 
+    border: px solid red; 
+    }
+    .footer-wrap {
+      display: block;
+      width: 100%;
+      height: 6.25em;
+      font-size: 0.8em; 
+      border: 0px solid blue;
+      position: relative;
+      top:-70px;
+      text-align: center;
+    }
+    
+}
+
+
+/* 글자확대축소 */
+@media(min-width:1000px){
+  
+    
+.area-zoom-btn {
+  display: block;
+  /* position: relative;
+  top:70px;
+
+ 
+ left: 49.5em; */
+
+  margin: 4px auto;
+  text-align: center;
+
+  
+  }
+}
+/* @media(max-width:944px){
+  
+    
+  .area-zoom-btn {
+    display: block;
+    position: relative;
+    top:70px;
+   right:10%;
+    margin: 4px auto;
+    text-align: center;
+  
+    
+    }
+  } */
+
+@media(max-width:644px){
+  
+    
+  .area-zoom-btn {
+    display: block;
+    /* position: relative;
+    top:70px;
+   right:10%; */
+    margin: 4px auto;
+    text-align: center;
+  
+    
+    }
+  }
+
+
+/* 글자확대축소 */
+
+.area-zoom-btn {
+  display: block;
+  /* position: fixed;
+  top: 2.9em;
+  right: 2.18em; */
+  margin: 4px auto;
+  text-align: center;  
+
+
+  
+}
+.area-zoom-btn .zoom-btn {
+  display: inline-block;
+  cursor: pointer;  
+ 
+}
+.area-zoom-btn .zoom-btn small {
+  font-size: 0.8em;
+  letter-spacing: -1px;
+  vertical-align: middle;
+  height: 18px;
+  border: 0px solid var(--lightgray);
+  /* border-top: 1px solid #777777;    */
+  float: left;
+
+  /* border-bottom: 0px solid #777777; */
+  padding: 0 0px;
+  line-height: 23px;
+  background-color:none;
+  
+}
+.area-zoom-btn .zoom-btn .zoom {
+  float: left;
+  width: 20px;
+  height: 18px;
+  border: 1px dotted lightgray;
+  /* text-indent: -9999px; */  /* 이게 없어야 +- 나타남 */
+  background-color: var(--white);
+  padding-bottom: 3px;
+  
+  
+ 
+  
+  /* background: url("https://jinnny.github.io/blog_source/img_comn.png"); 
+
+  background-repeat: no-repeat;
+  background-position: 0.33em 0.30em;
+  cursor: pointer;
+  
+}
+.area-zoom-btn .zoom-btn .zoom.zoomout {
+  background-position: 5px -55px; */
+  /* background-position: 0px 0px; */
+
+
+ 
+}
+
+
+
+
+  
+

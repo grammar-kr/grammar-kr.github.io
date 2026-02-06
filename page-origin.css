@@ -1,0 +1,938 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+:root {
+    /* 다크/라이트 */
+    --primary: #e9bdd9;
+    --secondary: #181818;
+    --background: whitesmoke;
+
+    --role-name: dodgerblue;
+    --role-word: #b16080;
+    --word-concept-line: #b16080;   
+
+    --interpretation: darkgray;
+    --s-text: rgb(141, 139, 139);
+    --colon: #000;
+    --switch: dodgerblue;
+    --p-color: #000;
+    --hover: dodgerblue;
+    --colspan-s-text: darkgray;
+    --colspan-arrow:  rgb(158, 155, 155);
+    --plus: #d81e0c;
+
+    --markcolor: dodgerblue;
+    --mark-bg-color: #11faa9;
+
+    --gold: gold;
+    --skyblue: dodgerblue;
+    --darkpink:  #b16080;
+    --lightgreen: #11faa9;
+    --sky: rgb(210, 239, 251);
+    --blue: blue;
+    --skyblue: skyblue;
+  
+   
+
+    --td-bold-white: whitesmoke;
+    --td-bold-red: #d81e0c;
+    --td-bold-green: #11faa9;
+    --td-bold-darkpink: #b16080;
+    --td-bold-blue: dodgerblue;
+ 
+    
+    --line-dot-black: black;
+    --line-dot-green: #11faa9;
+    --line-dot-red: #d81e0c;
+    --line-dot-blue: dodgerblue;
+    --line-dot-gold: gold;
+    
+    --line-solid-black: black;
+    --line-solid-green: #11faa9;
+    --line-solid-red: #d81e0c;
+    --line-solid-blue: dodgerblue;
+    --line-solid-gold: gold;
+   
+    --darkgray: darkgray;
+    --accodion-role-word: #b16080;
+    --red: #d81e0c;
+    --white: whitesmoke;
+    --shadow:  rgba(30, 30, 30, 1);
+
+}
+
+/* 다크 */
+
+.dark-mode{
+    --primary: #11faa9;
+    /* --primary: #d81e0c; */
+    --secondary: whitesmoke;
+    --background: rgb(30,30,30);
+    --word-name-text: gold;
+    --word-concept-line: #11faa9; 
+    --role-word: #11faa9;
+    --role-name: gold;
+    --skyblue: rgb(124, 255, 30);
+    --s-text: lightgray;
+    --td-bold-green: #0fdfdf;
+    --colon: whitesmoke;
+    --switch: gold;
+    --p-color: whitesmoke;
+    --concept-text:  whitesmoke;
+    --hover: dodgerblue;
+    --colspan-s-text: darkgray;
+    --colspan-arrow:  lightgray;
+    --plus: gold;
+    --markcolor: gold;
+    --mark-bg-color: gold;
+    --gold: #11faa9;
+    --darkpink:#11faa9;
+    --black: #000;
+    --white: rgb(30,30,30);
+    --blue: red;
+    --lightgreen: gold;
+    --skyblue: rgb(255, 231, 96);
+    --red:dodgerblue;
+    --shadow:  rgba(250, 250, 250, 1);
+
+    --td-bold-white: whitesmoke;
+    --td-bold-red: #d81e0c;
+    --td-bold-green: #b16080;
+    --td-bold-darkpink: #11faa9;
+    --td-bold-blue: dodgerblue;
+
+    /* --line-dot-black: whitesmoke; */
+    --line-dot-green: #11faa9;
+    --line-dot-red: #d81e0c;
+    --line-dot-blue: gold;
+    --line-dot-gold: gold;
+    
+    --line-solid-black: whitesmoke;
+    --line-solid-green: #11faa9;
+    --line-solid-red: #d81e0c;
+    --line-solid-blue: dodgerblue;
+    --line-solid-g0ld: gold;
+
+    --accodion-role-word: #11faa9;
+
+ /* 다크끝 */
+}
+
+/*  00  */
+html {font-size: 1rem;}    
+	
+     
+/*  00  */
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    letter-spacing: 0.01em;    
+    background-color: var(--background);
+    -ms-overflow-style: none;/* 스크롤바 */
+}
+
+body::-webkit-scrollbar {
+display: none;
+}/* 스크롤바 */
+
+
+a { text-decoration: overline; color: var(--blue);} 
+    /* 공통 style 적용순서에서 pop-up.css 보다 차순임 */
+      
+p{
+   
+    font-weight: 500;
+}
+.main-p{
+    padding-left: 1px;
+}
+/* 다크 */
+.switch{
+    position: absolute;
+    top:96px;
+    left: 88%;
+    border: 1px dotted var(--darkgray);
+    padding: 4px 12px;
+    border-radius: 5px;
+    color: var(--switch);
+    background: var(--colon);
+    font-size: 24px;
+    margin-left: 15px;
+    cursor: pointer;
+ }
+ .mode{
+    font-size: 12px;
+    font-weight: 300;
+ }
+/* 다크 끝*/
+
+/*  -- */
+mark { 
+    background: var(--sky);
+    border-radius: 2px;
+    color: var(--skyblue);
+}
+.mark { 
+    background: var(--primary);
+    border-radius: 2px;
+    color: var(--white);
+    margin-left: 20px;
+}
+
+
+
+/* 상단 stikey용 */
+.posit {
+    width:101%;
+    height: 100px;
+    padding-top: 0px;
+    margin-left: -.5em;    
+    background-color: var(--background);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+} 
+/*헤더 외각용*/ 
+.wrap {
+   
+    position: relative;
+    top: -2em;
+    margin-left: em;
+    width: 100%;
+    height: 3em;
+    
+    padding: 2.1em 0.7em; 
+
+    background-color: var(--background);
+    /* outline: dashed 1px whitesmoke; */
+ } 
+/* 헤더 중간바탕 */
+.in-wrap {
+    display:flex;
+    padding: 12px 12px;
+    width:100%; 
+    /* outline: dashed 1px whitesmoke; */
+    background-color:var(--background);   
+    
+}    
+
+/* --  */
+span { 
+    font-size: 1.0em; 
+    
+    text-decoration: none; 
+    color: var(--darkgray); 
+    /* position: relative; left: 51em; top:0px;  */
+    /* border: 1px dotted none;
+    border-left: 1;
+    border-right: 1;
+    border-top: 1; */
+
+    
+}
+/*  00  */
+.righter { 
+    font-size: 0.8em; 
+    text-decoration: none; 
+    color: var(--darkgray); 
+    position: relative; 
+    left: 46em; 
+    top:-45px; 
+
+    border: 1px dotted var(--darkgray);
+;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+}
+/*  00  */
+small {
+    font-size: .8em; 
+    
+    text-decoration: none;
+    color: var(--darkgray);  
+}
+/*  00  */
+.small {
+    font-size: .8em;
+    text-decoration: none;
+    color: var(--darkgray);  
+}
+
+
+/* 심층화 text 용 */
+/*  00  */
+.plus {
+    font-size: .8em; 
+    
+    text-decoration: none;
+    color: var(--plus);  
+    /*  position: relative; left: 0px; top:0px; */
+    border: 0px solid var(--darkgray);
+    border-left: 0;
+    border-right: 0;
+    border-top: 0; 
+}
+/*  --  */
+.strong-v {
+    font-size: 1em; 
+    
+    text-decoration: none;
+    color:var(--plus);
+    font-weight: 900;  
+    /*  position: relative; left: 0px; top:0px; */
+    border: 1px solid var(--darkgray);
+    border-left: 0;
+    border-right: 0;
+    border-top: 0; 
+}
+/*  00 */
+.container {
+    display: block;
+    position: relative;
+    background-color:none;
+    /* outline: 1px solid red; */
+    width: 60em;
+    height: auto;
+    margin: 0 auto; 
+    max-width: 49em !important;  
+}
+
+
+/* 선택어휘용 00*/
+.word-name {
+    display: flex;
+    width: auto;
+    height: 2.3em;
+    background-color:none;
+    margin-left: 0%;
+    font-size: 0.9em;
+    color: var(--role-word);
+    
+}
+/*  00  */
+#collon {
+    position: relative;
+    display: inline-block;
+    
+    padding-left: 6px; 
+    font-size: 1.6em; 
+    font-weight: bold; 
+    margin-bottom: 5px;
+    color: var(--colon);
+}
+/*  00  */
+#function {
+    position: relative;
+    display: inline-block;
+    
+    padding-left: 0.3em; 
+    font-size: 1.2em; 
+    font-weight: bold; 
+    margin-top: 0.3em;
+    color: var(--role-name);/* 역할기능 색 */
+    
+}
+
+/* 선택어휘 개념용 */
+/*  00  */
+.word-concept {
+    display: flex;
+    width: auto;
+    height: 2.3em;
+    padding-top: 0.4em;
+    background-color: none;
+    margin-left: 2%;
+    border-bottom:  2px dotted var(--word-concept-line);
+    font-size: .9em;
+}
+/*  00  */
+.center-hr  {
+    width: 100%;    
+    display: block; 
+    margin-top: 1px;
+    margin-left : auto;
+    margin-right : auto;
+    
+}
+/*  00  */
+.interpretation-right {
+    font-size: .8em; 
+    text-decoration: none;
+    color: var(--interpretation) ;    
+    position: relative; 
+    left: 10px; 
+    top:0px;/* 해석어가 오른쪽일 경우 */
+    /* border: 1px solid darkgray; */
+    border-left: 0px;
+    border-right: 0;
+    border-top: 0; 
+}
+.interpretation-under {
+    font-size: .8em; 
+    text-decoration: none;
+    color: var(--interpretation) ;    
+    position: relative; 
+    left: 16px; 
+    top:1px;/* 해석어가 오른쪽일 경우 */
+    /* border: 1px solid darkgray; */
+    border-left: 0px;
+    border-right: 0;
+    border-top: 0; 
+}
+/*  00  */
+.interpretation {
+    font-size: .8em; 
+    text-decoration: none;
+    color: var(--interpretation) ;    
+    position: relative; 
+    margin-left: 30px; 
+    top:-10px;/* 해석어가 아래일 경우 */
+    /* border: 1px solid darkgray; */
+    border-left: 0px;
+    border-right: 0;
+    border-top: 0; 
+}
+
+/*  --  */
+.role-underline {
+    font-size: 1em;
+    color: var(--gold);
+    border: 1px solid var(--role-underline-color);
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    border-bottom: 1; 
+}
+/* 언더라인 */
+.line-solid-black{    
+    border: 1px solid var(--line-solid-black);
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+}
+.line-dot-black{    
+    border: 2px dotted var(--line-solid-black);
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;}
+
+.line-solid-red{    
+    border: 1px solid var(--line-solid-red);
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+}
+.line-dot-red{    
+    border: 2px dotted var(--line-solid-red);
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+}
+.line-solid-gold{    
+    border: 1px solid var(--line-solid-gold);
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+}
+.line-dot-gold{    
+    border: 2px dotted var(--line-solid-gold);
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+}
+.line-solid-green{    
+    border: 1px solid var(--line-solid-green);
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+}
+.line-dot-green{    
+    border: 2px dotted var(--line-solid-green);
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+}
+.line-solid-blue{    
+    border: 1px solid var(--line-solid-blue);
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+}
+.line-dot-blue{    
+    border: 2px dotted var(--line-solid-blue);
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+}
+/*  언더라인 끝*/
+
+.darkpink{
+    color: var(--darkpink);    
+}
+.skyblue{
+    color: var(--skyblue);
+}
+.lightgreen{
+    color: var(--lightgreen);
+}
+.light-red{color: var(--red);
+}
+.light-gold{
+    color: var(--gold);
+}
+
+/*메인 예문에 관여 없애면 본문과 해석어 겹침*/
+.lg-text {
+    font-size: 1.2em; 
+    font-weight: bold;
+    margin-bottom: 16px; /* 해석어 높이 */
+    color: var(--main-sentence-color);
+    /* border: 1px solid var(--darkgray); */
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+}
+
+ /*  00  */
+.concept-text {
+    font-size: 1.2em; 
+    font-weight: bold; 
+    margin-bottom: 25px;
+    color: var(--concept-text) ;    
+    border: 0px solid var(--darkgray);
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    
+    
+    
+}
+/*  00  */
+.role-word {
+    font-size: 1.6em; 
+    font-weight: bold; 
+    margin-bottom: 5px;
+    color: var(--word-role);/* 주 선택어휘 색 */
+    /* border: 1px solid darkgray; */
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;     
+    
+}
+.accodion-role-word{
+    font-size: 1em; 
+    font-weight: bold; 
+    margin-bottom: 5px;
+    color: var(--role-word);/* 주 선택어휘 색 */
+    border: 1px solid var(--line-dot-blue);
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;     
+    
+}
+
+/*  --  */
+
+.sm-text {
+    font-size: 0.8em;
+    color: var(--darkgray);
+    border: 0px solid var(--darkgray);
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;    
+    
+}
+/*  00  */
+.concept-sm-text {
+    font-size: 0.7em;
+    color: var(--s-text);
+    vertical-align: 2px;
+    font-weight: 200;
+    }
+
+/*  --  */
+.m-text {
+    font-size: 1em;
+    color: var(--darkgray);
+    border: 0px solid red;
+    border-radius: 50em;
+    border-left: 1;
+    border-right: 1;
+    border-top: 1; 
+    background-color: black;
+    
+}
+
+/*메인 예시문 숫자*/
+.number-text {
+    font-size: 1em;
+    color: whitesmoke;
+    /* border: 1px solid red; */
+    border-radius: 45em;
+    border-left: 1;
+    border-right: 1;
+    border-top: 1; 
+    background-color: black;
+    
+}
+/*  --  */
+.smr-text {
+    font-size: 0.7rem;
+    color: var(--darkgray);
+    border: 0px solid var(--darkgray); 
+    border-left: 0;
+    border-right: 0;
+    border-top: 0; 
+}
+
+        /* 00 메인창 배경박스용 box*/
+.main-all {
+        display: block;       
+        background-color: var(--background);
+        /* border: 1px solid yellow; */
+        width: auto;
+        height: auto;
+        justify-content: space-between ;      
+        margin-left: -1%; /* box text 좌우 이동 */
+        margin-top: -1%;/* 메인창 box 상하 이동 */
+    
+    }
+    /*  00  */
+.intro {
+        display: block;
+        background:none;
+        /* border: 1px solid rgb(227, 33, 33); */
+        width: 49em;
+        /* height: auto; */
+        justify-content: space-between ;      
+        margin-left:0; /* 도입부 box text 좌우 이동 */
+        margin-top: -5em;/* 도입부 첫 text 상하 위치 */
+        margin-bottom: 8%;
+        padding-left: 9px;
+        padding-bottom: 5px;
+      
+    }
+    /*  00  */
+ .intro p {
+        font-size: 1em;
+        font-weight: 500;
+        color: var(--p-color);
+        margin-left: 1%; /* 도입부 p box 좌우 이동 */
+        margin-top: 3%;/* 도입부 p box 간격 */
+    
+    }    
+
+
+/* 어코디언용 */
+.accodion {
+    background-color: none;
+    /* border: 1px solid pink; */
+    display: block; 
+    position: relative; 
+    width: 49em;
+    margin-left: 1px;
+    
+}
+
+/*  메인 제시문 크기  */
+.accodion p{
+   
+    /* border: 1px solid yellowgreen; */
+    font-size: 1em;
+    color: var(--p-color);
+    margin-left: 6px; 
+    /* 메인 예문 box text 좌우 이동 */
+    margin-top: 3%;
+    /* 메인 예문 box text 상하 이동 */
+    padding: 0px;
+     
+}
+.accodion label p:hover{
+   
+    /* border: 1px solid blue; */
+    font-size: 1em;
+    color: var(--hover);
+    margin-left: 6px; 
+    /* 메인 예문 box text 좌우 이동 */
+    margin-top: 3%;
+    /* 메인 예문 box text 상하 이동 */
+    padding: 0px;
+     
+}
+
+/*  00  */
+input[id*="answer"] {
+    display:none;
+}
+/*  00  */
+input[id*="answer"] + label {
+    display: block;
+    width: 100%;
+    height: 30px;
+    margin:em;    /*제시본문 box 상하 간격 */
+    margin-top: 0em;   
+    font-size: 1.1em;
+    background: none;
+    cursor: pointer;
+  }
+/*  00  */
+input[id*="answer"] + label + div {
+    max-height: 0;
+    transition: all .1s;
+    overflow: hidden;/* 없으면 제시문들 상하겹칩 */
+    background: none;
+    font-size: 1em;    /* 클릭후 창 글자크기 */    
+  }
+  /*  00  */
+input[id*="answer"] + label + div p{
+    display: block;
+    padding-top: 0px;/* 제시 본문 클릭후 설명문 상 padding */
+    padding-left: 0.9em;/* 제시 본문 클릭후 설명문 왼쪽 padding */
+    padding-bottom: 0px;/* 제시 본문 클릭후 설명문 하 padding */
+    font-size: inherit;   
+}
+/*  00  */
+input[id*="answer"]:checked + label + div {max-height:60%;}
+
+/*  00  */
+.table {
+    
+    width:auto;    
+    text-align:left;
+    border: 0.01em solid red;
+    border-collapse: collapse;  
+    
+  }
+/*  00  */
+  th{
+    border: 0.01em solid black;
+    padding: 0em 0em;
+    text-align: left;
+  }
+  /*  00  */
+  td {
+    /* border: 0.01em solid lightcoral; */
+    /* table td line */
+    padding: 0em 0em;
+    text-align: left;
+    color: var(--p-color);
+    /* border: 1px solid blue;  */
+           /* 테이블 보더 확인선 */
+}
+  /*  00  */
+  .table-p {
+   
+  /* inrto 도입문과 main-all 분석구조문 box text 좌우 이동 */  
+    display: inline-block;
+    margin-left: .4em;/* 분석구조문 box좌우 이동 */      
+    margin-top: 1em;/* 분석구조문 box상하 이동 */
+    
+  }
+  /*  00  */
+  .table-m-p {
+       
+      display: inline-block;
+      margin-left: 1.2em;/* 분석구조문 box 좌우 이동 */      
+      margin-top: 1em;/* 분석구조문 box 상하 이동 */
+      
+    }
+    /*  00  */
+  .td-bold{ 
+    font-size: 1em;   
+    font-weight: 700;
+  }
+  /*  00  */
+  .td-bold-red{ 
+    color: var(--td-bold-red);   
+    font-weight: 700;
+  }
+  /*  00  */
+  .td-bold-darkpink{ 
+    color: var(--td-bold-darkpink);   
+    font-weight: 700;
+  }
+  .td-bold-green{ 
+    color: var(--td-bold-green);   
+    font-weight: 700;
+  }
+  /*  00  */
+  .td-bold-skyblue{ 
+    color: var(--skyblue);   
+    font-weight: 700;
+  }
+  /*  심층어휘 */
+  .d-s {
+    font-style: italic;
+    font-size: 0.9em;
+    color: var(--darkgray);/* 심층어휘 */
+    
+   
+  }
+  .d-s-line {    
+    border: 1px dotted var(--hover);/* 심층어휘 밑줄 */
+    border-left: 0;
+    border-right: 0;
+    border-top: 0; 
+    border-bottom: 1;
+    
+   
+  }
+  
+  /*  심층구조 해석어  */
+  .colspan-s-text {
+    font-style: normal;
+    font-size: 0.8em;
+    color: var(--colspan-s-text);    
+    
+  }
+  /*  00  */
+  .colspan-m-text {
+    font-style: normal;
+    font-size: 1em;
+    color: var(--colspan-arrow); 
+   
+  }
+  /*  00  */
+
+ 
+
+.footer-wrap {
+    font-size: 1em;
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    justify-content: space-between;
+    text-align: center;
+    padding: 2px 10px;
+    width:100%;
+    color: var(--darkgray);
+    background:none;
+    /* border: 0.01em solid lightcoral; */
+}
+
+.book{
+    position: absolute;
+    top: -80px;
+    left: 81%;
+    width: 161px; 
+    height:145px; 
+    /* border: 1px solid red; */
+    }
+
+
+
+@media(max-width:768px){
+        body{
+            font-size: 0.9em;
+        }
+        .switch{
+            position: absolute;
+            top:87px;
+            left: 77%;
+            border: 1px dotted var(--darkgray);
+            padding: 2px 9px;
+            border-radius: 5px;
+            color: var(--switch);
+            background: var(--colon);
+            font-size: 24px;
+            margin-left: 15px;
+            cursor: pointer;
+         }
+         .footer-wrap {
+            font-size: 0.9em;
+            text-align: left;
+        }
+        .footer{
+            font-size: 0.9em;
+            text-align: left;
+            margin-left: 100px;
+        }
+        .book{
+            position: absolute;
+            top: -80px;
+            left: 70%;
+            width: 138px; 
+            height:145px;   
+                        /* border: 1px solid red;  */
+ 
+                    }
+                  
+
+                   
+                /*  00  */
+.righter { 
+    font-size: 0.8em; 
+    text-decoration: none; 
+    color: var(--darkgray); 
+    position: relative; 
+    left: 39em; 
+    top:-46px; 
+
+    border: 1px dotted var(--darkgray);
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+}}
+
+
+
+@media(max-width:644px){
+        body{
+            font-size: 0.9em;
+        }
+        .switch{
+            position: absolute;
+            top:87px;
+            left: 50%;
+            border: 1px dotted var(--darkgray);
+            padding: 2px 9px;
+            border-radius: 5px;
+            color: var(--switch);
+            /* background: var(--colon); */
+            font-size: 24px;
+            margin-left: 15px;
+            cursor: pointer;
+         }
+         .footer-wrap {
+            font-size: 0.9em;
+            text-align: left;
+        }
+        .footer{
+            font-size: 0.9em;
+            text-align: left;
+            margin-left: 100px;
+        }
+        .book{
+            position: absolute;
+            top: -80px;
+            left: 47%;
+            width: 131px; 
+            height:145px;
+           
+            border: 1px solid red; 
+                       }
+             
+ 
+                .righter { 
+                    font-size: 0.8em; 
+                    text-decoration: none; 
+                    color: var(--darkgray); 
+                    position: relative; 
+                    left: 22.5em; 
+                    top:-46px; 
+                
+                    border: 1px dotted var(--darkgray);
+                    border-left: 0;
+                    border-right: 0;
+                    border-top: 0;
+                }
+            }
+
+
+
+ 
